@@ -139,10 +139,11 @@
  </target>
  
  <target name="phpmetrics" description="Generate PHPMetrics">
-  <exec executable="${basedir}/build/tools/phpmetrics.phar" dir="${basedir}/src">
+  <exec executable="${basedir}/build/tools/phpmetrics.phar">
    <arg value="--report-html=build/logs/phpmetrics.html" />
    <arg value="--report-xml=build/logs/phpmetrics.xml" />
    <arg value="--violations-xml=build/logs/violations.xml" />
+   <arg path="${basedir}/src" />
   </exec>
  </target>
 </project>
